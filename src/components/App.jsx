@@ -6,7 +6,8 @@ import About from './About';
 import Contact from './Contact';
 import Services from './Services';
 import Info from './Info';
-import "../css/style.css"
+import "../css/style.css";
+import EventManager from './EventManager';
 
  function App(){
   
@@ -19,6 +20,7 @@ import "../css/style.css"
       <Route path="/services" element={<Services />} />
       <Route path="/info" element={<Info />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/eventmanager" element={<Contact />} />
     </Routes>
     
   </Router>

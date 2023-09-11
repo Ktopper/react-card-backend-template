@@ -4,7 +4,7 @@
     "title": "Services",
     "image": "../images/gallery/gallery_home.png",
     "alt": "gallery",
-    "target":"/services",
+    "target":"/eventmanager",
     "markdownPath": "",
     "text": "Services offered"
   },
