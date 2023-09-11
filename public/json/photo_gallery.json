@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "url": "../images/gallery/gallery_home.png",
+        "caption": "Exterior",
+        "alt": "beach-exterior14.jpg"
+      },
+      {
+        "id": 2,
+        "url": "../images/gallery/gallery_home.png",
+        "caption": "Exterior",
+        "alt": "beach-exterior14.jpg"
+      },
+      {
+        "id": 3,
+        "url": "../images/gallery/gallery_home.png",
+        "caption": "Exterior",
+        "alt": "beach-exterior14.jpg"
+      },
+      {
+        "id": 4,
+        "url": "../images/gallery/gallery_home.png",
+        "caption": "Exterior",
+        "alt": "beach-exterior14.jpg"
+      },
+      {
+        "id": 5,
+        "url": "../images/gallery/gallery_home.png",
+        "caption": "Exterior",
+        "alt": "beach-exterior14.jpg"
+      },
+      {
+        "id": 6,
+        "url": "../images/gallery/gallery_home.png",
+        "caption": "Exterior",
+        "alt": "beach-exterior14.jpg"
+      },
+      {
+        "id": 7,
+        "url": "../images/gallery/gallery_home.png",
+        "caption": "Exterior",
+        "alt": "beach-exterior14.jpg"
+      }
+]

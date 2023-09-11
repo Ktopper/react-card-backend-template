@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "title":"Title 1",
+      "image": "./images/gallery/gallery_home.png",
+      "alt": "javascript book",
+      "description": "description paragraph",
+      "markdown": "../markdown/gallery/temp.md"
+    },
+    {
+        "id": 2,
+        "title":"Title 2",
+        "image": "./images/gallery/gallery_home.png",
+        "alt": "javascript book",
+        "description": "description paragraph",
+        "markdown": "../markdown/gallery/temp.md"
+      },
+      {
+        "id": 3,
+        "title":"Title 3",
+        "image":"./images/gallery/gallery_home.png",
+        "alt": "javascript book",
+        "description": "description paragraph",
+        "markdown": "../markdown/gallery/temp.md"
+      },
+      {
+        "id": 4,
+        "title":"Title 4",
+        "image": "./images/gallery/gallery_home.png",
+        "alt": "javascript book",
+        "description": "description paragraph",
+        "markdown": "../markdown/gallery/temp.md"
+      }
+ 
+   
+      
+    
+]

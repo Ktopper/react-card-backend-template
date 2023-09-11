@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "title":"Title 1",
+      "image": "./images/info/info_home.png",
+      "alt": "image alt",
+      "description": "description paragraph",
+      "markdown": "../markdown/info/temp.md"
+    },
+    {
+        "id": 2,
+        "title":"Title 2",
+        "image": "./images/info/info_home.png",
+        "alt": "image alt",
+        "description": "description paragraph",
+        "markdown": "../markdown/info/temp.md"
+      },
+      {
+        "id": 3,
+        "title":"Title 3",
+        "image":"./images/info/info_home.png",
+        "alt": "image alt",
+        "description": "description paragraph",
+        "markdown": "../markdown/info/temp.md"
+      },
+      {
+        "id": 4,
+        "title":"Title 4",
+        "image": "./images/info/info_home.png",
+        "alt": "image alt",
+        "description": "description paragraph",
+        "markdown": "../markdown/info/temp.md"
+      }
+ 
+   
+      
+    
+]

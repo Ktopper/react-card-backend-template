@@ -1,0 +1,143 @@
+.gallery-container{
+    margin-top: 20vh;
+    width: 100vw;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+  }
+  
+  .gallery-item {
+    overflow: hidden;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.1);
+  }
+  
+ 
+  
+
+
+  .gallery-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    animation: showOverlay 0.3s forwards;
+  }
+  
+  @keyframes showOverlay {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .gallery-modal-content {
+    background-color: white;
+    font-family: var(--font-nav-normal);
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 1em;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow: auto;
+    position: relative;
+    z-index: 1001;
+    opacity: 0;
+    animation: showModalContent 0.3s forwards;
+  }
+  
+  @keyframes showModalContent {
+    to {
+      opacity: 1;
+    }
+  }
+  .gallery-modal-content img{
+    width: 90vw;
+    max-width: 700px;
+    max-height: 70vh;
+  }
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    animation: showOverlay 0.3s forwards;
+  }
+  
+  @keyframes showOverlay {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 1em;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow: auto;
+    position: relative;
+    z-index: 1001;
+    opacity: 0;
+    animation: showModalContent 0.3s forwards;
+  }
+  
+  @keyframes showModalContent {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .image-transition {
+    opacity: 0;
+    animation: fadeInOut .3s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+ 
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .gallery-modal-content button{
+    color: rgb(80, 80, 60);
+    background-color:  rgb(232, 233, 202);
+    box-shadow:  2px 2px 5px rgba(0, 0, 0, 0.4),
+    -2px -2px 10px rgba(0, 0, 0, 0.1);
+    padding: .5rem;
+    padding-inline: 2rem;
+    margin-inline: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Murecho', sans-serif;
+    border: none;
+    border-radius: 10px;
+  }

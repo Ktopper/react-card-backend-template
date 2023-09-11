@@ -1,0 +1,39 @@
+
+
+
+User-agent: *
+Disallow:
+
+
+User-agent: Googlebot
+Disallow:
+
+
+User-agent: Bingbot
+Disallow:
+
+
+User-agent: Yandex
+Disallow:
+
+
+User-agent: Baiduspider
+Disallow:
+
+
+User-agent: DuckDuckBot
+Disallow:
+
+
+User-agent: Slurp
+Disallow:
+
+
+User-agent: *
+Disallow: /private/
+Disallow: /admin/
+Disallow: /restricted-area/
+Disallow: /unwanted-folder/
+Disallow: /page-to-exclude.html
+
+Sitemap: yourl link to Sitemap

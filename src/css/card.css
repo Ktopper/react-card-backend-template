@@ -1,0 +1,174 @@
+.card-container {
+    position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: grid;
+  margin: auto;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: var(--text-color-light);
+  background-color: var(--card-color-dark);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-container);
+  justify-content: center;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 20px;
+  grid-auto-flow: row;
+  grid-template-areas: "card-image card-story-area";
+
+  cursor: pointer; /* Add hand cursor on hover */
+  transition: all 0.3s ease-in-out;
+}
+.card-container.expanded{
+  width: 75vw;
+  grid-template-areas:
+   "card-story-area";
+}
+
+.card-story-area {
+  text-shadow: var(--text-shadow);
+  width: 40vw;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "card-title"
+    "card-md";
+  grid-area: card-story-area;
+}
+
+.card-story-area.expanded {
+    width: 70vw;}
+.card-story-area p{
+  padding-inline:2rem;
+}
+
+.card-title {
+  padding: 1rem;
+  text-shadow: var(--box-shadow);
+  grid-area: card-title;
+}
+
+.card-image {
+  justify-self: center;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  margin: auto;
+  grid-area: card-image;
+  transition: width 0.2s ease-in-out; /* Transition effect on image width */
+  width: 30vw; /* Initial width of the image */
+}
+
+.card-image.expanded {
+  display: none;
+}
+
+.card-md {
+  text-shadow: none;
+  justify-self: center;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--text-color-dark);
+  background-color: var(--card-color-light);
+  font-family: var(--font-md-normal);
+  margin: auto;
+  grid-area: card-md;
+  padding: 2rem;
+  padding-top: 0.5rem;
+  text-indent: 1rem;
+  text-align: start;
+  transition: max-height 0.15s ease-out; /* Optional: Add transition for smooth opening */
+  overflow: hidden; /* Optional: Prevent content from overflowing when not expanded */
+}
+.card-md a {
+  font-weight: 500;
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-color: rgb(0, 174, 255) ;
+  color: rgb(194, 2, 194);
+}
+.card-md img{
+  padding-top: 1rem;
+  width: 65vw;
+  max-width: 500px;
+}
+.card-md h3{
+  display: block;
+  
+  text-decoration: underline;
+  text-align: center;
+}
+.card-container.even {
+    grid-template-areas: "card-image card-story-area";
+  }
+  
+.card-container.odd {
+    grid-template-areas: " card-story-area card-image";
+  }
+@media only screen and (max-width: 700px) {
+
+.card-container {
+   
+    width: 80vw;
+    padding: .0rem;
+    padding-top: 1rem;
+    justify-content: center;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "card-image "
+      "card-story-area";
+  }
+  .card-container.even, .card-container.odd {
+    grid-template-areas:
+    "card-image "
+    "card-story-area";;
+  }
+  .card-story-area {
+   padding: 0.5;
+    width: 76vw;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "card-title"
+      "card-md";
+    grid-area: card-story-area;
+  }
+
+  .card-title {
+    margin: unset;
+    grid-area: card-title;
+  }
+
+  .card-image {
+    width: 75vw; /* Initial width of the image */
+  }
+
+
+  .card-container.expanded {
+    padding:unset;
+    width:90vw;
+  }
+  .card-story-area.expanded {
+    width: 90vw;}
+
+  .card-md {
+    width: 80vw;
+    padding: .5rem;
+    padding-top: 0.5rem;
+  }
+  .card-md img{
+    
+    padding-top: 1rem;
+    width: 60vw;
+  }
+  .card-md ol{
+    padding: 15px;
+  }
+  .card-md ol ul {
+    padding-left: 10px;
+  }
+}

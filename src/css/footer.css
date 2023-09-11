@@ -1,0 +1,53 @@
+.footer-area {
+    display: none;
+    margin: auto;
+    margin-top: 3vh;
+    margin-bottom: -1rem;
+    font-size: 0.8rem;
+    font-family: var(--font-nav-normal);
+    color: var(--text-color-light);
+    height: auto;
+    width: 95vw;
+    background-color: var(--nav-color);
+    padding-block: 2rem;
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(100%);
+    grid-area: footer-area;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "footer-buttons"
+      "footer-text";
+  }
+  .footer-area.show {
+    display: block;
+    transform: translateY(0);
+  }
+  .footer-text {
+    margin: auto;
+    margin-inline: 10vw;
+    text-rendering: 0px;
+    line-height: 1rem;
+    font-size: 0.9rem;
+    grid-area: footer-text;
+  }
+  .footer-buttons {
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   margin: auto;
+   gap: 50px;
+    grid-area: footer-buttons;
+  }
+  .air-bnb-button, .mail-button {
+    width: 50px;
+    height: auto;
+  }
+  .air-bnb-button img, .mail-button img {
+    width: 50px;
+    height: auto;
+  }
+  
+  /*----Cell Phone----*/
+  @media only screen and (max-width: 700px) {
+  }

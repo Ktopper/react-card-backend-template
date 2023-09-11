@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Services",
+    "image": "../images/gallery/gallery_home.png",
+    "alt": "gallery",
+    "target":"/services",
+    "markdownPath": "",
+    "text": "Services offered"
+  },
+  {
+    "id": 2,
+    "title": "Info",
+    "image": "../images/info/info_home.png",
+    "alt": "contact",
+    "target":"/info",
+    "markdownPath": "",
+    "text": "Information about projects and places "
+  },
+  {
+    "id": 3,
+    "title": "About",
+    "image": "../images/about/about_home.png",
+    "alt": "about",
+    "target":"/about",
+    "markdownPath": "",
+    "text": "Learn about Us and our goals"
+  },
+  {
+    "id": 4,
+    "title": "Contact",
+    "image": "../images/contact/contact_home.png",
+    "alt": "contact",
+    "target":"/contact",
+    "markdownPath": "",
+    "text": "Interested? lets do this!"
+  }
+]
