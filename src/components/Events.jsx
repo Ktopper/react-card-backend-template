@@ -1,15 +1,21 @@
 import{ useEffect, useState } from 'react';
 
 function Events() {
-  const [events, setEvents] = useState([]);
+ 
   const [error, setError] = useState(null);
-
+  const [events, setEvents] = useState(null);
   useEffect(() => {
     fetch('/.netlify/functions/fetch-events')
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
+      })
       .then(data => setEvents(data))
       .catch(error => setError(error.message));
   }, []);
+  
 
   if (error) {
     return <div>Error: {error}</div>;
@@ -19,7 +25,7 @@ function Events() {
     <div>
       <h1>Events</h1>
       <ul>
-        {events.map(event => (
+        {Array.isArray(events) && events.map(event => (
           <li key={event.id}>{event.title}</li>
         ))}
       </ul>
