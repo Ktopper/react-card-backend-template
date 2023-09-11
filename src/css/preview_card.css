@@ -1,0 +1,59 @@
+.preview-card-container{    display:grid;
+    margin: auto;
+    margin-top: 2rem;
+    width: 35vw;
+    height: auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    row-gap: 1rem;
+}
+.preview-card{
+    border-radius: 10px;
+    display:grid;
+    margin: auto;
+    padding-block: 20px;
+    width: 25vw;
+    height: auto;
+    text-align: center;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "preview-image" "preview-title" "preview-date" "preview-actions";
+}
+.preview-image{
+    width: 15vw;
+    height: auto;
+grid-area: preview-image;
+}
+.preview-image img{
+    width: 15vw;
+
+}
+.preview-title, .preview-date, .preview-actions, .preview-image{
+    margin: auto;
+    padding: 5px;
+    width:25vw;
+}
+.preview-title{
+    grid-area: preview-title;
+}
+.preview-date{
+    grid-area: preview-date;
+}
+.preview-actions{
+    grid-area: preview-actions;
+}
+@media only screen and (max-width: 700px) {
+
+    .preview-card-container{
+        width: 85vw;
+    }    .preview-card{
+    width: 75vw;
+}
+    .preview-title, .preview-date, .preview-actions, .preview-image{
+        width:75vw;
+    }
+    .preview-image img{
+        width: 55vw;}
+    
+}
