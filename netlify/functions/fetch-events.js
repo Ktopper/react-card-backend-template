@@ -8,10 +8,10 @@ export async function handler(event, context) {
 
   try {
     connection = await mysql.createConnection({
-      host: process.env.DB_HOST,
-      user: process.env.DB_USER,
-      password: process.env.DB_PASSWORD,
-      database: process.env.DB_NAME,
+      host: process.env.PLANETSCALE_HOST,
+      user: process.env.PLANETSCALE_USERNAME,
+      password: process.env.PLANETSCALE_PASSWORD,
+      database: process.env.PLANETSCALE_DATABASE,
       ssl: {
         rejectUnauthorized: false,
       },
