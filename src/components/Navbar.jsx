@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import "../css/navbar.css";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,16 +35,20 @@ function Navbar() {
 
   return (
     <nav className={isOpen ? 'open' : ''}>
-      <h1 className='nav-title'>Title</h1>
+      <h1 className='nav-title'>TITLE</h1>
+      <Link className='nav-logo' to="/">
       <img className='nav-logo' src="../images/home/logo.png" alt="logo"/>
+    </Link>
       {
         isMobile
         ? (
           <div className='hamburger' onClick={handleHamburgerClick}>
             {/* A simple "hamburger" icon */}
-            <div></div>
-            <div></div>
-            <div></div>
+            <div className={isHamburgerOpen ? 'toggle' : ''}></div>
+            <div className={isHamburgerOpen ? 'toggle' : ''}></div>
+            <div className={isHamburgerOpen ? 'toggle' : ''}></div>
+
+            {/* The dropdown menu */}
 
             {/* The dropdown menu */}
             {isHamburgerOpen && (
