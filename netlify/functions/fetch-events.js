@@ -25,10 +25,11 @@ export async function handler(event, context) {
       body: JSON.stringify(results),
     };
   } catch (error) {
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: error.message }),
-    };
+      console.error(error); // Log the error to console
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error: error.message }),
+      };
   } finally {
     if (connection && connection.end) await connection.end();
   }

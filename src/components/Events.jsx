@@ -6,14 +6,15 @@ function Events() {
   const [events, setEvents] = useState(null);
   useEffect(() => {
     fetch('/.netlify/functions/fetch-events')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok ' + response.statusText);
-        }
-        return response.json();
-      })
-      .then(data => setEvents(data))
-      .catch(error => setError(error.message));
+    .then(response => {
+      console.log(response); // Log the full response
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => setEvents(data))
+    .catch(error => setError(error.message));
   }, []);
   
 
