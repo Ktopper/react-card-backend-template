@@ -1,6 +1,7 @@
 import Footer from './Footer';
 import { useState, useEffect } from "react";
 import HomeCard from './HomeCard';
+import Events from './Events';
 
 function Home(){
   const [data, setData] = useState([]);
@@ -14,7 +15,10 @@ function Home(){
 
   return(
   <div className='container'>
-    <div className='title-area'><h2>Wander and be Curious</h2></div>
+    <div className='title-area'><h2>Wander and be Curious</h2>
+      
+      <Events/>
+      </div>
     <div className='content-area'>
     {data.map(item => (
       <HomeCard key={item.id} item={item} />
