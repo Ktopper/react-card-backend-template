@@ -20,7 +20,7 @@ import EventManager from './EventManager';
       <Route path="/services" element={<Services />} />
       <Route path="/info" element={<Info />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/eventmanager" element={<Contact />} />
+      <Route path="/eventmanager" element={<EventManager />} />
     </Routes>
     
   </Router>
