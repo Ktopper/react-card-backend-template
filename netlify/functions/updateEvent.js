@@ -1,15 +1,21 @@
-// updateEvent.js
 import { connectToDatabase } from './db';
+import { validateEventData } from './validationUtils';
 
 export async function handler(event, context) {
   let connection;
+  const eventId = event.pathParameters.id;
+  const eventData = JSON.parse(event.body);
+
+  const validationError = validateEventData(eventData);
+  if (validationError) {
+    console.error(validationError);
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ error: validationError }),
+    };
+  }
+
   try {
-    const eventId = event.pathParameters.id;
-    const eventData = JSON.parse(event.body);
-
-    console.log("Event ID:", eventId);
-    console.log("Event Data:", eventData);
-
     connection = await connectToDatabase();
 
     const query = 'UPDATE Events SET ? WHERE id = ?';
@@ -20,7 +26,7 @@ export async function handler(event, context) {
       body: JSON.stringify({ message: "Event updated successfully" }),
     };
   } catch (error) {
-    console.error("Error:", error);
+    console.error(error);
     return {
       statusCode: 500,
       body: JSON.stringify({ error: error.message }),

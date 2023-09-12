@@ -1,9 +1,18 @@
-// createEvent.js
 import { connectToDatabase } from './db';
+import { validateEventData } from './validationUtils';
 
 export async function handler(event, context) {
   let connection;
   const eventData = JSON.parse(event.body);
+
+  const validationError = validateEventData(eventData);
+  if (validationError) {
+    console.error(validationError);
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ error: validationError }),
+    };
+  }
 
   try {
     connection = await connectToDatabase();
