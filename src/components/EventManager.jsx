@@ -68,6 +68,7 @@ function EventManager() {
   
 
   const sortEvents = (events) => {
+    console.log(events)
     // Function to sort events by date
     return events.sort((a, b) => {
       const dateA = new Date(
@@ -80,6 +81,7 @@ function EventManager() {
         parseInt(b.dateMonth) - 1,
         parseInt(b.dateDay)
       );
+      
       return dateA - dateB;
     });
   };
