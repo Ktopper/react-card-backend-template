@@ -4,7 +4,9 @@ import { validateEventData } from './validationUtils';
 export async function handler(event, context) {
   let connection;
   const eventData = JSON.parse(event.body);
-  console.log("Received eventData:", eventData);  // Logging the eventData to console
+
+  console.log("Event body:", event.body); // Logging the raw event body
+  console.log("Parsed event data:", eventData); 
   const validationError = validateEventData(eventData);
   if (validationError) {
     console.error(validationError);
