@@ -3,10 +3,13 @@ import { connectToDatabase } from './db';
 
 export async function handler(event, context) {
   let connection;
-  const eventId = event.pathParameters.id;
-  const eventData = JSON.parse(event.body);
-
   try {
+    const eventId = event.pathParameters.id;
+    const eventData = JSON.parse(event.body);
+
+    console.log("Event ID:", eventId);
+    console.log("Event Data:", eventData);
+
     connection = await connectToDatabase();
 
     const query = 'UPDATE Events SET ? WHERE id = ?';
@@ -17,7 +20,11 @@ export async function handler(event, context) {
       body: JSON.stringify({ message: "Event updated successfully" }),
     };
   } catch (error) {
-    // ... (your error handling here)
+    console.error("Error:", error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: error.message }),
+    };
   } finally {
     if (connection && connection.end) await connection.end();
   }
