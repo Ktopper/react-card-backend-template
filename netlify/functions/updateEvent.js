@@ -5,7 +5,7 @@ export async function handler(event, context) {
   let connection;
   const eventId = event.pathParameters.id;
   const eventData = JSON.parse(event.body);
-
+  console.log("Received eventData:", eventData);  // Logging the eventData to console
   const validationError = validateEventData(eventData);
   if (validationError) {
     console.error(validationError);
