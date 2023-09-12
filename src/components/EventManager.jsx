@@ -59,12 +59,24 @@ function EventManager() {
   };
 
   useEffect(() => {
-    fetch("/.netlify/functions/readEvents")
-    .then((response) => response.json())
-    .then((data) => setEvents(sortEvents(data)))
-    .catch((error) => console.error("Error fetching data:", error));
+    async function fetchData() {
+      try {
+        const response = await fetch("/.netlify/functions/readEvents");
   
+        if (!response.ok) {
+          throw new Error("Network response was not ok " + response.statusText);
+        }
+  
+        const data = await response.json();
+        setEvents(sortEvents(data));
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+  
+    fetchData();
   }, []);
+  
   
 
   const sortEvents = (events) => {
