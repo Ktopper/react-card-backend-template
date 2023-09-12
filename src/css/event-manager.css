@@ -77,7 +77,8 @@
     width: 100px;
   }
   .background-input button{
-
+    border-radius: 10px;
+    border-style: none;
     height: 100px;
     width: auto;
   }
