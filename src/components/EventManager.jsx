@@ -60,15 +60,10 @@ function EventManager() {
 
   useEffect(() => {
     fetch("/.netlify/functions/readEvents")
-      .then((response) => {
-        // Log the response text to the console
-        return response.text().then((text) => {
-          console.log(text);
-          return JSON.parse(text);
-        });
-      })
-      .then((data) => setEvents(sortEvents(data)))
-      .catch((error) => console.error("Error fetching data:", error));
+    .then((response) => response.json())
+    .then((data) => setEvents(sortEvents(data)))
+    .catch((error) => console.error("Error fetching data:", error));
+  
   }, []);
   
 
